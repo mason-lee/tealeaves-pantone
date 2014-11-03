@@ -1,0 +1,182 @@
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+}
+
+#mask {
+	width:500%;
+	height:100%;
+}
+
+.item {
+	width:20%;
+	height:100%;
+	float:left;
+	background-color:#ddd;
+}
+
+.panel {
+	background: none;
+}
+
+.btn-wrapper {
+	width: 135px;
+	margin: 0 auto;
+}
+
+.btn {
+	display: block;
+	/*width: 135px;*/
+	margin-bottom: 14px;
+	text-shadow: none;
+}
+
+.btn a {
+	color: #202020;
+}
+
+.btn a:hover {
+	text-decoration: none;
+}
+
+#item2 {
+	background-color: #428bca;
+}
+
+#item3 {
+	background-color: #5cb85c;
+}
+
+#item4 {
+	background-color: #5bc0de;
+}
+
+#item5 {
+	background-color: #f0ad4e;
+}
+
+.content {
+	width: 400px;
+	top: 20%;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+	text-align: center;
+	padding: 10px;
+}
+
+.selected {
+	/*background:#fff;
+	font-weight:700;*/
+}
+
+.clear {
+	clear:both;
+}
+
+.horizontal-container {
+	white-space: nowrap;
+	height: 60px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.colour-wrapper {
+	float: left;
+	display: inline;
+	height: 60px;
+	width: 956px;
+}
+
+.colour-box {
+	float: left;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: blue;
+	text-align: center;
+	position: relative;
+}
+
+/*
+	http://checkdonc.ca/p/JC2/
+*/
+.poppy-red {
+	background-color: #e72f43;
+}
+
+.nectarine {
+	background-color: #f8865d;
+}
+
+.lemon-zest {
+	background-color: #fce56d;
+}
+
+.tender-shoots {
+	background-color: #b6d357;
+}
+
+.emerald {
+	background-color: #029d7b;
+}
+
+.grayed-jade {
+	background-color: #97c4ae;
+}
+
+.dusk-blue {
+	background-color: #78a1bd;
+}
+
+.monaco-blue {
+	background-color: #064575;
+}
+
+.african-violet {
+	background-color: #b385b7;
+}
+
+.linen {
+	background-color: #fde1cd;
+}
+
+.tidal-foam {
+	background-color: #cac4ad;
+}
+
+.alloy {
+	background-color: #989899;
+}
+
+.sunflower {
+	background-color: #edaf38;
+}
+
+.vibrant-orange {
+	background-color: #f88439;
+}
+
+.colour-wrapper ul li:last-child {
+	padding-right: 0;
+}
+
+
+
+
+
+
+
+
