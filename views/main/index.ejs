@@ -1,74 +1,72 @@
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h4 class="modal-title" id="myModalLabel">Scan the colour that represents your mood.</h4>
-			</div>
-			<div class="modal-body">
-				<button type="button" class="btn btn-success">
-					Launch the camera
-				</button>
-			</div>
-			<div class="horizontal-container">
-				<div class="colour-wrapper">
-					<ul class="list-inline">
-						<li>
-							<span class="colour-box poppy-red"></span>
-						</li>
-						<li>
-							<span class="colour-box nectarine"></span>		
-						</li>
-						<li>
-							<span class="colour-box lemon-zest"></span>		
-						</li>
-						<li>
-							<span class="colour-box tender-shoots"></span>		
-						</li>
-						<li>
-							<span class="colour-box emerald"></span>		
-						</li>
-						<li>
-							<span class="colour-box grayed-jade"></span>		
-						</li>
-						<li>
-							<span class="colour-box dusk-blue"></span>		
-						</li>
-						<li>
-							<span class="colour-box monaco-blue"></span>		
-						</li>
-						<li>
-							<span class="colour-box african-violet"></span>		
-						</li>
-						<li>
-							<span class="colour-box linen"></span>		
-						</li>
-						<li>
-							<span class="colour-box tidal-foam"></span>			
-						</li>
-						<li>
-							<span class="colour-box alloy"></span>			
-						</li>
-						<li>
-							<span class="colour-box sunflower"></span>
-						</li>
-						<li>
-							<span class="colour-box vibrant-orange"></span>	
-						</li>
+<div id="my_camera"></div>		
+	<!-- A button for taking snaps -->
+	<form class="snap-button">
+		<input type="button" class="snap-button" onClick="take_snapshot()">
+		<span class="icon-uniE606"></span>
+	</form>
+<!-- <div id="results">Your captured image will appear here...</div> -->
 
-					</ul>
-				</div>
-			</div>
-
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
-			</div>
-		</div>
+<div class="horizontal-container row">
+	<div class="colour-wrapper container">
+		<ul class="list-inline">
+			<li class="poppy-red">
+				<span class="colour-box"></span>
+				<div class="colour-box-hover">poppy red</div>
+			</li>
+			<li class="nectarine">
+				<span class="colour-box"></span>		
+				<div class="colour-box-hover">nectarine</div>
+			</li>
+			<li class="lemon-zest">
+				<span class="colour-box lemon-zest"></span>		
+				<div class="colour-box-hover">lemon-zest</div>
+			</li>
+			<li class="tender-shoots">
+				<span class="colour-box"></span>		
+				<div class="colour-box-hover">tender-shoots</div>
+			</li>
+			<li class="emerald">
+				<span class="colour-box"></span>		
+				<div class="colour-box-hover">emerald</div>
+			</li>
+			<li class="dusk-blue">
+				<span class="colour-box"></span>		
+				<div class="colour-box-hover">dusk-blue</div>
+			</li>
+			<li class="african-violet">
+				<span class="colour-box"></span>		
+				<div class="colour-box-hover">african-violet</div>
+			</li>
+			<li class="ballerenia-pink">
+				<span class="colour-box"></span>		
+				<div class="colour-box-hover">linen</div>
+			</li>
+			<li class="pewter-grey">
+				<span class="colour-box"></span>			
+				<div class="colour-box-hover">tidal-foam</div>
+			</li>
+			<li class="black">
+				<span class="colour-box"></span>			
+				<div class="colour-box-hover">alloy</div>
+			</li>
+			<li class="camping-brown">
+				<span class="colour-box"></span>
+				<div class="colour-box-hover">sunflower</div>
+			</li>
+			<li class="white">
+				<span class="colour-box"></span>	
+				<div class="colour-box-hover">vibrant orange</div>
+			</li>
+		</ul>
 	</div>
 </div>
 
-<div>
-	
-</div>
+
+
+
+
+
+
+
+
 

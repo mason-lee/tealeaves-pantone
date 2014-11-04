@@ -28,11 +28,12 @@ var jsFilesToInject = [
   'js/dependencies/jquery.min.js',
   'js/dependencies/jquery.min.map.js',
   'js/dependencies/jquery.scrollTo.js',
-  // 'js/dependencies/jquery.min.js',
+  'js/dependencies/jquery.scrollmagic.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
-
+  'js/bootstrap/**/*.js',
+  'js/lib/**/*.js',
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js'

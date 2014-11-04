@@ -3,11 +3,103 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	background-color: #f7f7f7;
+	overflow-x: hidden;
 }
 
-::-webkit-scrollbar { 
+/*::-webkit-scrollbar { 
     display: none; 
+}*/
+button:focus {outline:0 !important;}
+/**
+ *  Weather icons
+ */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?h4yf3f');
+	src:url('fonts/icomoon.eot?#iefixh4yf3f') format('embedded-opentype'),
+		url('fonts/icomoon.woff?h4yf3f') format('woff'),
+		url('fonts/icomoon.ttf?h4yf3f') format('truetype'),
+		url('fonts/icomoon.svg?h4yf3f#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE606:before {
+	content: "\e606";
+}
+.icon-uniE605:before {
+	content: "\e605";
+}
+.icon-uniE607:before {
+	content: "\e607";
+}
+.icon-uniE600:before {
+	content: "\e600";
+}
+.icon-uniE601:before {
+	content: "\e601";
+}
+.icon-uniE602:before {
+	content: "\e602";
+}
+.icon-uniE603:before {
+	content: "\e603";
+}
+.icon-uniE604:before {
+	content: "\e604";
+}
+
+.weather-wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	opacity: 0.7;
+}
+
+.weather {
+	font-size: 25px;
+}
+
+.temperature {
+	font-size: 23px;
+}
+/*	End the weather styling */
+
+/*
+	Camera
+ */
+.snap-button {
+	position: absolute;
+	left: 45%;
+	bottom: 20%;
+	background: none;
+	border: none;
+}
+
+.icon-uniE606 {
+	font-size: 23px;
+	border: 1px solid white;
+	border-radius: 74px;
+	padding: 11px;
+	color: white;
+	background-color: black;
 }
 
 #wrapper {
@@ -25,8 +117,8 @@ body {
 }
 
 .item {
-	width:20%;
-	height:100%;
+	width: 20%;
+	height: 100%;
 	float:left;
 	background-color:#ddd;
 }
@@ -95,28 +187,34 @@ body {
 	height: 60px;
 	overflow-x: auto;
 	overflow-y: hidden;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
+.horizontal-container>container {
+	padding: 0;
+}
 .colour-wrapper {
-	float: left;
-	display: inline;
 	height: 60px;
-	width: 956px;
+	margin: 0 auto;
+}
+
+.colour-wrapper ul {
+	display: table;
+	height: 60px;
+	width: 100%;
 }
 
 .colour-box {
 	float: left;
 	display: block;
-	width: 60px;
-	height: 60px;
-	background-color: blue;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 	position: relative;
 }
 
-/*
-	http://checkdonc.ca/p/JC2/
-*/
 .poppy-red {
 	background-color: #e72f43;
 }
@@ -137,45 +235,168 @@ body {
 	background-color: #029d7b;
 }
 
-.grayed-jade {
-	background-color: #97c4ae;
-}
-
 .dusk-blue {
 	background-color: #78a1bd;
-}
-
-.monaco-blue {
-	background-color: #064575;
 }
 
 .african-violet {
 	background-color: #b385b7;
 }
 
-.linen {
-	background-color: #fde1cd;
+.ballerenia-pink {
+	background-color: #e048a3;
 }
 
-.tidal-foam {
-	background-color: #cac4ad;
+.pewter-grey {
+	background-color: #ADAFAA;
 }
 
-.alloy {
-	background-color: #989899;
+.black {
+	background-color: black;
 }
 
-.sunflower {
-	background-color: #edaf38;
+.camping-brown {
+	background-color: #5a2e12;
 }
 
-.vibrant-orange {
-	background-color: #f88439;
+.white {
+	background-color: #fff;
+}
+
+.colour-wrapper ul li {
+	display: table-cell;
+	height: 60px;
+	padding: 0;
+	position: relative;
 }
 
 .colour-wrapper ul li:last-child {
 	padding-right: 0;
 }
+
+.colour-box-hover {
+	opacity: 0;
+	-webkit-transition: opacity 300ms ease;
+	-moz-transition: opacity 300ms ease;
+	transition: opacity 300ms ease;
+	padding: 20px 0;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: #202020;
+	font-weight: bold;
+	font-size: 10px;
+	font-size: 0.70909rem;
+	line-height: 14px;
+	line-height: 1.27273rem;
+	letter-spacing: 0.98px;
+	letter-spacing: 0.08909rem;
+	color: #f4f4f4;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.colour-selected {
+	-webkit-transition: opacity 300ms ease;
+	-moz-transition: opacity 300ms ease;
+	transition: opacity 300ms ease;
+	padding: 20px 0;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: #202020;
+	font-weight: bold;
+	font-size: 10px;
+	font-size: 0.70909rem;
+	line-height: 14px;
+	line-height: 1.27273rem;
+	letter-spacing: 0.98px;
+	letter-spacing: 0.08909rem;
+	color: #f4f4f4;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+.slide-control {
+	margin-top: 80px;
+	z-index: 3;
+}
+
+.slide-control li {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-color: rgba(255,255,255,.4);
+	clear: both;
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	height: 11px;
+	list-style: none;
+	margin-bottom: 11px;
+	margin-right: 20px;
+	-moz-transition: background-color .5s;
+	-o-transition: background-color .5s;
+	-webkit-transition: background-color .5s;
+	transition: background-color .5s;
+	width: 11px;
+	top: 50%;
+}
+
+.sidebar {
+	position: fixed;
+}
+
+.sticky-nav {
+	z-index: 99;
+	top: 0;
+	margin-top: 80px;
+}
+
+.nav-active {
+	font-weight: bold;
+}
+
+#content section {
+	width: 100%;
+	height: 100vh;
+}
+
+#flavor-1 {
+	background-color: red;
+}
+
+#flavor-2 {
+	background-color: orange;
+}
+
+#flavor-3 {
+	background-color: green;
+}
+
+#flavor-4 {
+	background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
