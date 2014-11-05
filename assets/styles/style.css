@@ -112,6 +112,15 @@ input:focus {outline:0 !important;}
 	height: 600px;
 }
 
+.focusing {
+	width: 135px;
+	position: absolute;
+}
+
+.not-display {
+	display: none;
+}
+
 .camera-icon {
 	font-size: 23px;
 	border: 1px solid white;

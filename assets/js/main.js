@@ -127,6 +127,25 @@ $(document).ready(function() {
 	    layoutMode: 'fitRows'
   	});
 
+	/*
+		Capturing animation
+	 */
+	
+	var $focusImage = $(".focusing");
+	$(".camera-icon").click(function() {
+		// console.log("clicked.");
+		$focusImage.removeClass("not-display");
+		$focusImage.addClass("animated fadeIn");
+		$focusImage.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$focusImage.removeClass("fadeIn");
+			$focusImage.addClass("pulse");
+
+			// $focusImage.addClass("animated fadeOut");
+			// $focusImage.removeClass("animated fadeOut");
+			// $focusImage.addClass("not-display");
+		});
+	});
+
 
 
 
