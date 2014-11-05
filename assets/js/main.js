@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	/*
 		checking to see wether the page the user was on before 
 		was nothing (they've opened a new browser window) 
@@ -9,6 +10,13 @@ $(document).ready(function() {
 		$(window).load(function() {
 			$("#myModal").modal('show');
 		});
+	}
+
+	jQuery.fn.center = function () {
+	    this.css("position","fixed");
+	    this.css("top", ($(window).height() / 2) - (this.outerHeight() / 2));
+	    this.css("left", ($(window).width() / 2) - (this.outerWidth() / 2));
+	    return this;
 	}
 	
 	/*
@@ -130,21 +138,75 @@ $(document).ready(function() {
 	/*
 		Capturing animation
 	 */
-	
-	var $focusImage = $(".focusing");
-	$(".camera-icon").click(function() {
-		// console.log("clicked.");
-		$focusImage.removeClass("not-display");
-		$focusImage.addClass("animated fadeIn");
-		$focusImage.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-			$focusImage.removeClass("fadeIn");
-			$focusImage.addClass("pulse");
-
-			// $focusImage.addClass("animated fadeOut");
-			// $focusImage.removeClass("animated fadeOut");
-			// $focusImage.addClass("not-display");
-		});
+	// place the done mark in the center of the document	
+	$(".check-done").center();
+	// Hide the check mark in the center
+	$(".check-done").addClass("not-display");
+	$(window).resize(function() {
+		$(".check-done").center();
 	});
+
+	function snapFunction($focusingImage) {
+		$("."+$focusingImage).removeClass("not-display");
+		$("."+$focusingImage).addClass("pulse").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$("."+$focusingImage).addClass("not-display");
+		});		
+	}
+
+	// var $focusImage = $(".focusing");
+	$(".camera-icon").click(function() {
+		$(".focusing").css({
+			left: "35%",
+			top: "55%"
+		});
+		snapFunction("focusing");
+
+		setTimeout(secondAnimation, 1300);
+
+		function secondAnimation() {
+			$(".focusing2").css({
+				left: "40%",
+				top: "40%"
+			});
+			snapFunction("focusing2");	
+		}
+
+		setTimeout(thirdAnimation, 2500);
+		
+		function thirdAnimation() {
+			$(".focusing3").css({
+				left: "40%",
+				top: "50%"
+			});
+			snapFunction("focusing3");		
+		}
+
+		setTimeout(detectDone, 3700)
+		function detectDone() {
+			$(".check-done").removeClass("not-display").addClass("animated rubberBand");
+		}
+
+		debugger;
+
+		var selectedColour = $(".dusk-blue");
+		setTimeout(colourSelected, 4600);
+
+		function colourSelected() {
+			selectedColour.addClass("animated rubberBand");	
+			$(".poppy-red, .nectarine, .lemon-zest, .tender-shoots, .emerald, .african-violet, .ballerenia-pink, .pewter-grey, .black, .camping-brown, .white").animate({
+				opacity: 0
+			}, 1000);
+		}
+		
+		setTimeout(openStory, 5600);
+		
+		function openStory() {
+			window.location.href = $(".openStoryPage").attr('href');
+		}
+		
+	});
+	
+	
 
 
 
