@@ -2,14 +2,21 @@
  * Configure a few settings and attach camera
  */
 
-if ($(".icon-uniE606").length > 0) {
-	Webcam.set({
-		width: 1280,
-		height: 720,
-		image_format: 'jpeg',
-		jpeg_quality: 90
-	});
+if ($(".snap-button").length > 0) {
+		var width = $(document).width,
+			height = $(window).height;	
 
+		$("body").css({
+			backgroundColor: "#202020"
+		});
+
+		Webcam.set({
+			width: width,
+			height: height,
+			image_format: 'jpeg',
+			jpeg_quality: 90
+		});
+	
 	Webcam.attach( '#my_camera' );
 	/*
 		Code to handle taking the snapshot and displaying it locally

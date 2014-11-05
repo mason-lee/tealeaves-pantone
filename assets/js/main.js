@@ -75,12 +75,14 @@ $(document).ready(function() {
 		aArray.push(ahref);
 	} 
 
+	var windowHeight;
+	var docHeight;
 	$(window).scroll(function(){
 		// Get the offset of the window from the top of page
 		var windowPos = $(window).scrollTop(); 
 		// Get the height of the window
-		var windowHeight = $(window).height(); 
-		var docHeight = $(document).height();
+		windowHeight = $(window).height(); 
+		docHeight = $(document).height();
 
 		for (var i=0; i < aArray.length; i++) {
 			var theID = aArray[i];
@@ -107,7 +109,28 @@ $(document).ready(function() {
 	/**
 	 * Snap button positioning
 	 */
-	// $("")
+	var snapButton = $(".snap-button");
+	var videoHeight;
+
+	$(window).resize(function() {
+		videoHeight = $("#my_camera>video").height();	
+		snapButton.css({
+
+		});
+	});
+
+	/*
+		Colour boxes isotope
+	 */
+	var $container = $(".colour-wrapper>ul").isotope({
+	    itemSelector: '.element-item',
+	    layoutMode: 'fitRows'
+  	});
+
+
+
+
+
 });
 
 
