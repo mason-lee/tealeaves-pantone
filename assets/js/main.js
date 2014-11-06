@@ -218,7 +218,8 @@ $(document).ready(function() {
 		$(closebtn).insertAfter($(this));
 
 		$("#home-video span.close-button").on("click", function() {
-				$("#home-video").css("min-height","100px");
+				$("#home-video").css("min-height","100vh");
+				
 				$("#video-player").remove();
 				$(this).remove();
 				$("#home-video span.play-button").show();
@@ -226,7 +227,7 @@ $(document).ready(function() {
 	});
 	
 	
-	
+	// $(".recommended-tea").center();
 
 
 
