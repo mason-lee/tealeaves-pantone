@@ -6,7 +6,7 @@ body {
 	overflow-x: hidden;
 	font-family: 'univers_ce_45_lightregular';
 	font-family: 'adobe_garamondregular';
-	background-color: #fff !important;
+	background-color: #fff;
 }
 
 /*font-family: 'adobe_garamondregular';*/
@@ -163,11 +163,17 @@ h5 {
 	Camera
  */
 .snap-button-wrapper {
-	bottom: 20%;
 	width: 100%;
+	margin-top: -135px;
 	text-align: center;
-	position: absolute;
+	margin-bottom: 30px;
 }
+
+.snap-button-wrapper>div{
+	margin-bottom: 75px;
+}
+
+
 
 .snap-button {
 	background: none;
@@ -177,7 +183,7 @@ h5 {
 }
 
 #my_camera {
-	height: 600px;
+	height: 570px;
 }
 
 .focusing {
@@ -216,17 +222,25 @@ h5 {
 }
 
 .camera-icon {
-	font-size: 23px;
 	border: 1px solid white;
-	border-radius: 74px;
-	padding: 12px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	padding: 13px;
 	color: white;
 	background-color: black;
-	padding-top: 10px;
+	padding-top: 30px;
+}
+
+.camera-icon img {
+	width: 35px;
+	margin-bottom: -4px;
 }
 
 .camera-wrapper {
 	position: relative;
+	font-family: 'univers_ce_45_lightregular';
 }
 
 .camera-wrapper h4 {
@@ -324,12 +338,8 @@ h5 {
 
 .horizontal-container {
 	white-space: nowrap;
-	height: 60px;
-	/*overflow-x: auto;
-	overflow-y: hidden;*/
 	position: relative;
-	/*bottom: 0;*/
-	/*width: 100%;*/
+	padding: 30px 15px;
 }
 
 .horizontal-container>container {
@@ -348,6 +358,24 @@ h5 {
 
 	#my_camera {
 		height: 430px;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.snap-button-wrapper>div {
+		margin-bottom: 30px;		
+	}	
+}
+
+
+@media screen and (max-width: 440px) {
+	.colour-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.colour-wrapper ul li {
+		width: 13%;
+		height: 60px;
 	}
 }
 
@@ -423,10 +451,10 @@ h5 {
 	height: 70px;
 	padding: 0;
 	position: relative;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-0-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-0-border-radius: 10px;
+	border-radius: 10px;
 	border: 4px solid #202020;
 }
 
@@ -439,7 +467,7 @@ h5 {
 	-webkit-transition: opacity 300ms ease;
 	-moz-transition: opacity 300ms ease;
 	transition: opacity 300ms ease;
-	padding: 20px 0;
+	padding: 12px 0;
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -448,7 +476,7 @@ h5 {
 	background-color: #202020;
 	font-weight: bold;
 	font-size: 10px;
-	font-size: 0.70909rem;
+	font-size: 0.50909rem;
 	line-height: 14px;
 	line-height: 1.27273rem;
 	letter-spacing: 0.98px;
@@ -483,7 +511,7 @@ h5 {
 
 /*
 	Story page
- */
+ 
 
 .slide-control {
 	z-index: 3;
@@ -662,6 +690,30 @@ nav {
 /*
 	Video Playing
  */
+
+.journey-button-wrapper {
+	padding-top: 30px;
+}
+
+.journey-button {
+	width: 130px;
+	padding: 10px 15px;
+	margin: 0 auto;
+	background: none;
+	border: 1px solid #fff;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-0-border-radius: 0;
+	border-radius: 0;
+	color: #fff;
+	font-family: 'univers_ce_45_lightregular';
+}
+
+.journey-button:hover {
+	background-color: #677718;	
+	color: #fff;
+}
+
 #home-video, #home-video img {
 	min-width: 100%;
 	position: relative;
@@ -726,11 +778,41 @@ nav {
 }
 
 
+/**
+ * Video background
+ */
+video#bgvid {
+	position: fixed; right: 0; bottom: 0;
+	min-width: 100%; min-height: 100%;
+	width: auto; height: auto; z-index: -100;
+	background: url("../images/poster.png") no-repeat;
+	background-size: cover;
+}
 
+.violet-pattern {
+	background-image: url("../images/purple.jpg");
+	background-repeat: repeat;
+}
 
+.blue-pattern {
+	background-image: url("../images/blue.jpg");
+	background-repeat: repeat;	
+}
 
+.brown-pattern {
+	background-image: url("../images/brown.jpg");
+	background-repeat: repeat;		
+}
 
+.orange-pattern {
+	background-image: url("../images/organge.jpg");
+	background-repeat: repeat;			
+}
 
+.grey-pattern {
+	background-image: url("../images/grey.jpg");
+	background-repeat: repeat;			
+}
 
 
 
