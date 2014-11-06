@@ -218,8 +218,8 @@ $(document).ready(function() {
 		// 			</video>";
 
 		var video ="<video class='teastory-video' autoplay>" + 
-						"<source src='images/FINAL.webm' type='video/webm'>"
-						"<source src='images/FINAL.mp4' type='video/mp4'>"
+						"<source src='images/FINAL-60percent.webm' type='video/webm'>"
+						"<source src='images/FINAL-60percent.mp4' type='video/mp4'>"
 					"</video>";
 
 		$(video).insertBefore($("#home-video"));
