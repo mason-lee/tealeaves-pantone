@@ -13,10 +13,10 @@ $(document).ready(function() {
 	}
 
 	jQuery.fn.center = function () {
-	    this.css("position","fixed");
-	    this.css("top", ($(window).height() / 2) - (this.outerHeight() / 2));
-	    this.css("left", ($(window).width() / 2) - (this.outerWidth() / 2));
-	    return this;
+			this.css("position","fixed");
+			this.css("top", ($(window).height() / 2) - (this.outerHeight() / 2));
+			this.css("left", ($(window).width() / 2) - (this.outerWidth() / 2));
+			return this;
 	}
 	
 	/*
@@ -131,9 +131,9 @@ $(document).ready(function() {
 		Colour boxes isotope
 	 */
 	var $container = $(".colour-wrapper>ul").isotope({
-	    itemSelector: '.element-item',
-	    layoutMode: 'fitRows'
-  	});
+			itemSelector: '.element-item',
+			layoutMode: 'fitRows'
+		});
 
 	/*
 		Capturing animation
@@ -186,8 +186,6 @@ $(document).ready(function() {
 			$(".check-done").removeClass("not-display").addClass("animated rubberBand");
 		}
 
-		debugger;
-
 		var selectedColour = $(".dusk-blue");
 		setTimeout(colourSelected, 4600);
 
@@ -202,12 +200,33 @@ $(document).ready(function() {
 		
 		function openStory() {
 			window.location.href = $(".openStoryPage").attr('href');
-		}
+		}		
+	});
+
+/**
+ * 	<iframe width="560" height="315" src="//www.youtube.com/embed/90qhv3IMfuw" frameborder="0" allowfullscreen></iframe>
+ */
+
+	$("#home-video>img, .play-button").on("click", function() {
+		$("#home-video").css("min-height","100vh");
+		var urlToVideo = $("#home-video img").attr('data-video');
 		
+		var video = '<iframe id="video-player" width="100%" height="100%" src="'+ urlToVideo +' frameborder="0" allowfullscreen wmode="opaque"></iframe>';
+		$(video).insertAfter($("#home-video img"));
+		$("#home-video span.play-button").hide();
+		var closebtn = '<span class="close-button"></span>';
+		$(closebtn).insertAfter($(this));
+
+		$("#home-video span.close-button").on("click", function() {
+				$("#home-video").css("min-height","100px");
+				$("#video-player").remove();
+				$(this).remove();
+				$("#home-video span.play-button").show();
+		});
 	});
 	
 	
-
+	
 
 
 
