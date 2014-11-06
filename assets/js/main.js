@@ -207,37 +207,39 @@ $(document).ready(function() {
  * 	<iframe width="560" height="315" src="//www.youtube.com/embed/90qhv3IMfuw" frameborder="0" allowfullscreen></iframe>
  */
 
-	$("#home-video>img, .play-button").on("click", function() {
+	$("#home-video>img, .journey-button").on("click", function() {
 		$("#home-video").css("min-height","100vh");
-		var urlToVideo = $("#home-video img").attr('data-video');
+		// var urlToVideo = $("#home-video img").attr('data-video');
 		
-		var video = '<iframe id="video-player" width="100%" height="100%" src="'+ urlToVideo +' frameborder="0" allowfullscreen wmode="opaque"></iframe>';
+		// var video = '<iframe id="video-player" width="100%" height="100%" src="'+ urlToVideo +' frameborder="0" allowfullscreen wmode="opaque"></iframe>';
 		// var video = "<video autoplay loop poster=\"../images/poster.png\" id=\"bgvid\">
 		// 				<source src=\"images/testing-smog.webm\" type=\"video/webm\">
 		// 				<source src=\"images/testing-smog.mp4\" type=\"video/mp4\">
 		// 			</video>";
 
-		// var video ="<video autoplay poster=\"images/poster.png\"></video>";
+		var video ="<video class='teastory-video' autoplay>" + 
+						"<source src='images/FINAL.webm' type='video/webm'>"
+						"<source src='images/FINAL.mp4' type='video/mp4'>"
+					"</video>";
 
-		$(video).insertAfter($("#home-video img"));
-		$("#home-video span.play-button").hide();
+		$(video).insertBefore($("#home-video"));
+		$("#home-video span.journey-button, .recommended-tea").hide();
 		var closebtn = '<span class="close-button"></span>';
+
+		$(".teastory-video").defaultPlaybackRate = 5.0;
+		$(".teastory-video").play();
+
 		$(closebtn).insertAfter($(this));
 
 		$("#home-video span.close-button").on("click", function() {
-				$("#home-video").css("min-height","100vh");
-				
-				$("#video-player").remove();
-				$(this).remove();
-				$("#home-video span.play-button").show();
+			$("#home-video").css("min-height","100vh");
+			$("#video-player").remove();
+			$(this).remove();
+			$("#home-video span.journey-button, .recommended-tea").show();
 		});
 	});
-	
-	
-	$(".landing-button").center();
 
-
-
+	$(".landing-button-wrapper").center();
 
 });
 
