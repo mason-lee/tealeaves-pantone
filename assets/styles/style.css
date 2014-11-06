@@ -166,7 +166,7 @@ h5 {
 	width: 100%;
 	margin-top: -135px;
 	text-align: center;
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 }
 
 .snap-button-wrapper>div{
@@ -340,6 +340,7 @@ h5 {
 	white-space: nowrap;
 	position: relative;
 	padding: 30px 15px;
+	margin: 0;
 }
 
 .horizontal-container>container {
@@ -509,13 +510,12 @@ h5 {
 	text-align: center;
 }
 
-/*
+
 	Story page
  
 
-.slide-control {
-	z-index: 3;
-	padding-left: 0;
+#padding-top {
+	padding-top: 15px !important;
 }
 
 .slide-control li {
@@ -524,7 +524,7 @@ h5 {
 	-o-transition: background-color .5s;
 	-webkit-transition: background-color .5s;
 	transition: background-color .5s;
-	/*top: 50%;*/
+	/*top: 50%;
 	padding: 0px 35px;
 	padding-bottom: 14px;
 	/*border-top: 1px solid #e0dedd;*/
@@ -532,7 +532,7 @@ h5 {
 
 .slide-control li a {
 	/*font-family: 'univers_ce_55_mediumbold';*/
-	font-size: 0.8em;
+	font-size: 14px;
 	color: #333;
 }
 
@@ -578,7 +578,7 @@ h5 {
 
 nav {
 	/*position: relative !important;*/
-	margin-top: 40px;
+	margin-top: 80px;
 	bottom: 0;
 }
 
@@ -814,6 +814,15 @@ video#bgvid {
 	background-repeat: repeat;			
 }
 
+.landing-button {
+	background: none;
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	font-family: 'univers_ce_55_mediumbold';
+	border-radius: 0;
+}
 
 
 

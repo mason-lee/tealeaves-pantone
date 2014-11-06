@@ -212,6 +212,13 @@ $(document).ready(function() {
 		var urlToVideo = $("#home-video img").attr('data-video');
 		
 		var video = '<iframe id="video-player" width="100%" height="100%" src="'+ urlToVideo +' frameborder="0" allowfullscreen wmode="opaque"></iframe>';
+		// var video = "<video autoplay loop poster=\"../images/poster.png\" id=\"bgvid\">
+		// 				<source src=\"images/testing-smog.webm\" type=\"video/webm\">
+		// 				<source src=\"images/testing-smog.mp4\" type=\"video/mp4\">
+		// 			</video>";
+
+		// var video ="<video autoplay poster=\"images/poster.png\"></video>";
+
 		$(video).insertAfter($("#home-video img"));
 		$("#home-video span.play-button").hide();
 		var closebtn = '<span class="close-button"></span>';
@@ -227,7 +234,7 @@ $(document).ready(function() {
 	});
 	
 	
-	// $(".recommended-tea").center();
+	$(".landing-button").center();
 
 
 
